@@ -1,0 +1,134 @@
+<html>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DerivaTech</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$']]
+            }
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <h1>Sistema Inteligente de Derivación Matemática</h1>
+
+        <p>
+            Proyecto Final • Introducción al Cálculo • UVG Campus Sur
+        </p>
+
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="container">
+
+        <!-- ENTRADA -->
+        <section class="card">
+
+            <h2>Ingrese una función</h2>
+
+            <div class="input-group">
+
+                <input type="text" id="funcInput" placeholder="Ejemplo: 3x^2+2x+7">
+
+                <button onclick="derivar()">
+                    Derivar
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- RESULTADO -->
+        <section class="card" id="resultCard" style="display:none;">
+
+            <h2>Resultado</h2>
+
+            <div id="mathOriginal"></div>
+
+            <br>
+
+            <div id="mathDerived"></div>
+
+            <br>
+
+            <div id="rawResult"></div>
+
+        </section>
+
+        <!-- PASOS -->
+        <section class="card" id="stepsCard" style="display:none;">
+
+            <h2>Proceso Paso a Paso</h2>
+
+            <div id="stepsList"></div>
+
+        </section>
+
+        <!-- EXPLICADOR VISUAL -->
+        <section class="card">
+
+            <h2>¿Cómo piensa el algoritmo?</h2>
+
+            <div id="algorithmFlow">
+
+            </div>
+
+        </section>
+
+        <!-- PRUEBAS -->
+        <section class="card">
+
+            <h2>Casos de Prueba</h2>
+
+            <div id="testsGrid"></div>
+
+        </section>
+
+        <!-- REGLAS -->
+        <section class="card">
+
+            <h2>Reglas Implementadas</h2>
+
+            <div id="rulesGrid"></div>
+
+        </section>
+
+    </main>
+
+    <!-- JS -->
+    <script src="js/app.js"></script>
+    <script src="js/derivative.js"></script>
+    <script src="js/tokenizer.js"></script>
+    <script src="js/explainer.js"></script>
+    <script src="js/latex.js"></script>
+    <script src="js/parser.js"></script>
+    <script src="js/ui.js"></script>
+    
+    
+
+</body>
+
+</html>
