@@ -293,3 +293,49 @@ document.addEventListener(
 
     }
 );
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        cargarPruebas();
+
+        cargarReglas();
+
+        const input =
+            document.getElementById(
+                "funcInput"
+            );
+
+        document
+            .querySelectorAll(
+                ".symbol-btn"
+            )
+            .forEach(btn => {
+
+                btn.addEventListener(
+                    "click",
+                    () => {
+
+                        const start = input.selectionStart;
+                        const end = input.selectionEnd;
+
+                        input.value =
+                            input.value.substring(0, start) +
+                            btn.dataset.symbol +
+                            input.value.substring(end);
+
+                        input.selectionStart =
+                        input.selectionEnd =
+                            start + btn.dataset.symbol.length;
+
+                        input.focus();
+
+                    }
+                );
+
+            });
+
+    }
+);
+

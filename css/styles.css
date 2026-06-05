@@ -372,3 +372,27 @@ body {
     background: #e5e7eb;
     color: #374151;
 }
+
+.symbol-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.symbol-btn {
+    border: none;
+    background: #0f4c81;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.symbol-btn:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}
